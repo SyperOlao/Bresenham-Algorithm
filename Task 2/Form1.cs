@@ -44,12 +44,18 @@ namespace Task_2
             System.Drawing.Bitmap.GetPixelFormatSize(PixelFormat.Format32bppArgb);
             int pixelsSize = 20; 
             grid.DrawGrid(graphics, 0, 0, pictureBox1.Width, pictureBox1.Height, pixelsSize);
-            
+            //grid.DrawPixel(graphics, 3, 4);
+           // grid.Algoritnm(graphics, 5, 2, 2, 5);
+            grid.DrawBresenhamLine(5, 2, 2, 5, graphics);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            //DrawLine(Graphics.FromImage(pictureBox1.Image),
+             //   (int)nX1.Value, (int)nY1.Value, 
+             //   (int)nX2.Value, (int)nY2.Value);
+
+            pictureBox1.Refresh(); 
         }
     }
 }
