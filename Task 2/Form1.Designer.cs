@@ -31,16 +31,26 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxX1 = new System.Windows.Forms.TextBox();
+            this.textBoxX2 = new System.Windows.Forms.TextBox();
+            this.textBoxY1 = new System.Windows.Forms.TextBox();
+            this.textBoxY2 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBoxX1Elips = new System.Windows.Forms.TextBox();
+            this.textBoxX2Ellips = new System.Windows.Forms.TextBox();
+            this.textBoxY1Ellips = new System.Windows.Forms.TextBox();
+            this.textBoxY2Ellips = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -64,41 +74,45 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(590, 173);
+            this.button1.Location = new System.Drawing.Point(590, 186);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(141, 32);
             this.button1.TabIndex = 3;
-            this.button1.Text = "Нарисовать";
+            this.button1.Text = "Draw a line";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // textBoxX1
             // 
-            this.textBox1.Location = new System.Drawing.Point(540, 80);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(99, 22);
-            this.textBox1.TabIndex = 4;
+            this.textBoxX1.Location = new System.Drawing.Point(571, 80);
+            this.textBoxX1.Name = "textBoxX1";
+            this.textBoxX1.Size = new System.Drawing.Size(81, 22);
+            this.textBoxX1.TabIndex = 4;
+            this.textBoxX1.Text = "0";
             // 
-            // textBox2
+            // textBoxX2
             // 
-            this.textBox2.Location = new System.Drawing.Point(540, 121);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(99, 22);
-            this.textBox2.TabIndex = 5;
+            this.textBoxX2.Location = new System.Drawing.Point(571, 121);
+            this.textBoxX2.Name = "textBoxX2";
+            this.textBoxX2.Size = new System.Drawing.Size(81, 22);
+            this.textBoxX2.TabIndex = 5;
+            this.textBoxX2.Text = "0";
             // 
-            // textBox3
+            // textBoxY1
             // 
-            this.textBox3.Location = new System.Drawing.Point(664, 80);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(102, 22);
-            this.textBox3.TabIndex = 6;
+            this.textBoxY1.Location = new System.Drawing.Point(689, 80);
+            this.textBoxY1.Name = "textBoxY1";
+            this.textBoxY1.Size = new System.Drawing.Size(90, 22);
+            this.textBoxY1.TabIndex = 6;
+            this.textBoxY1.Text = "0";
             // 
-            // textBox4
+            // textBoxY2
             // 
-            this.textBox4.Location = new System.Drawing.Point(664, 121);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(102, 22);
-            this.textBox4.TabIndex = 7;
+            this.textBoxY2.Location = new System.Drawing.Point(689, 121);
+            this.textBoxY2.Name = "textBoxY2";
+            this.textBoxY2.Size = new System.Drawing.Size(90, 22);
+            this.textBoxY2.TabIndex = 7;
+            this.textBoxY2.Text = "0";
             // 
             // pictureBox1
             // 
@@ -109,33 +123,33 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
             // 
-            // textBox5
+            // textBoxX1Elips
             // 
-            this.textBox5.Location = new System.Drawing.Point(540, 309);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(99, 22);
-            this.textBox5.TabIndex = 8;
+            this.textBoxX1Elips.Location = new System.Drawing.Point(571, 309);
+            this.textBoxX1Elips.Name = "textBoxX1Elips";
+            this.textBoxX1Elips.Size = new System.Drawing.Size(81, 22);
+            this.textBoxX1Elips.TabIndex = 8;
             // 
-            // textBox6
+            // textBoxX2Ellips
             // 
-            this.textBox6.Location = new System.Drawing.Point(540, 347);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(99, 22);
-            this.textBox6.TabIndex = 9;
+            this.textBoxX2Ellips.Location = new System.Drawing.Point(571, 347);
+            this.textBoxX2Ellips.Name = "textBoxX2Ellips";
+            this.textBoxX2Ellips.Size = new System.Drawing.Size(81, 22);
+            this.textBoxX2Ellips.TabIndex = 9;
             // 
-            // textBox7
+            // textBoxY1Ellips
             // 
-            this.textBox7.Location = new System.Drawing.Point(667, 309);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(99, 22);
-            this.textBox7.TabIndex = 10;
+            this.textBoxY1Ellips.Location = new System.Drawing.Point(689, 309);
+            this.textBoxY1Ellips.Name = "textBoxY1Ellips";
+            this.textBoxY1Ellips.Size = new System.Drawing.Size(90, 22);
+            this.textBoxY1Ellips.TabIndex = 10;
             // 
-            // textBox8
+            // textBoxY2Ellips
             // 
-            this.textBox8.Location = new System.Drawing.Point(667, 347);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(99, 22);
-            this.textBox8.TabIndex = 11;
+            this.textBoxY2Ellips.Location = new System.Drawing.Point(689, 347);
+            this.textBoxY2Ellips.Name = "textBoxY2Ellips";
+            this.textBoxY2Ellips.Size = new System.Drawing.Size(90, 22);
+            this.textBoxY2Ellips.TabIndex = 11;
             // 
             // button2
             // 
@@ -143,29 +157,129 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(141, 32);
             this.button2.TabIndex = 12;
-            this.button2.Text = "Нарисовать";
+            this.button2.Text = "Draw an Ellips";
             this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(530, 45);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(162, 17);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Enter coordinates of line";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(537, 83);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(25, 17);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "X1";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(537, 121);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(25, 17);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "X2";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(658, 80);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(25, 17);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Y1";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(658, 124);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(25, 17);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "Y2";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(537, 271);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(173, 17);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Enter coordinates of Ellips";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(537, 312);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(25, 17);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "X1";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(537, 347);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(25, 17);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "X2";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(658, 312);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(25, 17);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Y1";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(658, 350);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(25, 17);
+            this.label10.TabIndex = 22;
+            this.label10.Text = "Y2";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBoxY2Ellips);
+            this.Controls.Add(this.textBoxY1Ellips);
+            this.Controls.Add(this.textBoxX2Ellips);
+            this.Controls.Add(this.textBoxX1Elips);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxY2);
+            this.Controls.Add(this.textBoxY1);
+            this.Controls.Add(this.textBoxX2);
+            this.Controls.Add(this.textBoxX1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Name = "Form1";
-            this.Text = "Алгоритм Брезенхема";
+            this.Text = "Bresenham\'s Algorithm";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.Resize += new System.EventHandler(this.Form1_Resize);
@@ -181,16 +295,26 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxX1;
+        private System.Windows.Forms.TextBox textBoxX2;
+        private System.Windows.Forms.TextBox textBoxY1;
+        private System.Windows.Forms.TextBox textBoxY2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBoxX1Elips;
+        private System.Windows.Forms.TextBox textBoxX2Ellips;
+        private System.Windows.Forms.TextBox textBoxY1Ellips;
+        private System.Windows.Forms.TextBox textBoxY2Ellips;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }
 
