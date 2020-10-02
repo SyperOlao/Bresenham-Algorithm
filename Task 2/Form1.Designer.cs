@@ -36,10 +36,10 @@
             this.textBoxY1 = new System.Windows.Forms.TextBox();
             this.textBoxY2 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBoxX1Elips = new System.Windows.Forms.TextBox();
-            this.textBoxX2Ellips = new System.Windows.Forms.TextBox();
+            this.textBoxX1Ellips = new System.Windows.Forms.TextBox();
+            this.textBoxWidthEllips = new System.Windows.Forms.TextBox();
             this.textBoxY1Ellips = new System.Windows.Forms.TextBox();
-            this.textBoxY2Ellips = new System.Windows.Forms.TextBox();
+            this.textBoxHeightEllips = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -123,19 +123,21 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
             // 
-            // textBoxX1Elips
+            // textBoxX1Ellips
             // 
-            this.textBoxX1Elips.Location = new System.Drawing.Point(571, 309);
-            this.textBoxX1Elips.Name = "textBoxX1Elips";
-            this.textBoxX1Elips.Size = new System.Drawing.Size(81, 22);
-            this.textBoxX1Elips.TabIndex = 8;
+            this.textBoxX1Ellips.Location = new System.Drawing.Point(571, 309);
+            this.textBoxX1Ellips.Name = "textBoxX1Ellips";
+            this.textBoxX1Ellips.Size = new System.Drawing.Size(81, 22);
+            this.textBoxX1Ellips.TabIndex = 8;
+            this.textBoxX1Ellips.Text = "2";
             // 
-            // textBoxX2Ellips
+            // textBoxWidthEllips
             // 
-            this.textBoxX2Ellips.Location = new System.Drawing.Point(571, 347);
-            this.textBoxX2Ellips.Name = "textBoxX2Ellips";
-            this.textBoxX2Ellips.Size = new System.Drawing.Size(81, 22);
-            this.textBoxX2Ellips.TabIndex = 9;
+            this.textBoxWidthEllips.Location = new System.Drawing.Point(571, 347);
+            this.textBoxWidthEllips.Name = "textBoxWidthEllips";
+            this.textBoxWidthEllips.Size = new System.Drawing.Size(81, 22);
+            this.textBoxWidthEllips.TabIndex = 9;
+            this.textBoxWidthEllips.Text = "14";
             // 
             // textBoxY1Ellips
             // 
@@ -143,13 +145,15 @@
             this.textBoxY1Ellips.Name = "textBoxY1Ellips";
             this.textBoxY1Ellips.Size = new System.Drawing.Size(90, 22);
             this.textBoxY1Ellips.TabIndex = 10;
+            this.textBoxY1Ellips.Text = "7";
             // 
-            // textBoxY2Ellips
+            // textBoxHeightEllips
             // 
-            this.textBoxY2Ellips.Location = new System.Drawing.Point(689, 347);
-            this.textBoxY2Ellips.Name = "textBoxY2Ellips";
-            this.textBoxY2Ellips.Size = new System.Drawing.Size(90, 22);
-            this.textBoxY2Ellips.TabIndex = 11;
+            this.textBoxHeightEllips.Location = new System.Drawing.Point(689, 347);
+            this.textBoxHeightEllips.Name = "textBoxHeightEllips";
+            this.textBoxHeightEllips.Size = new System.Drawing.Size(90, 22);
+            this.textBoxHeightEllips.TabIndex = 11;
+            this.textBoxHeightEllips.Text = "7";
             // 
             // button2
             // 
@@ -159,6 +163,7 @@
             this.button2.TabIndex = 12;
             this.button2.Text = "Draw an Ellips";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -228,9 +233,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(537, 347);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(25, 17);
+            this.label8.Size = new System.Drawing.Size(32, 17);
             this.label8.TabIndex = 20;
-            this.label8.Text = "X2";
+            this.label8.Text = "Wid";
             // 
             // label9
             // 
@@ -244,11 +249,11 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(658, 350);
+            this.label10.Location = new System.Drawing.Point(658, 347);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(25, 17);
+            this.label10.Size = new System.Drawing.Size(29, 17);
             this.label10.TabIndex = 22;
-            this.label10.Text = "Y2";
+            this.label10.Text = "Hei";
             // 
             // Form1
             // 
@@ -266,10 +271,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBoxY2Ellips);
+            this.Controls.Add(this.textBoxHeightEllips);
             this.Controls.Add(this.textBoxY1Ellips);
-            this.Controls.Add(this.textBoxX2Ellips);
-            this.Controls.Add(this.textBoxX1Elips);
+            this.Controls.Add(this.textBoxWidthEllips);
+            this.Controls.Add(this.textBoxX1Ellips);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBoxY2);
             this.Controls.Add(this.textBoxY1);
@@ -280,8 +285,6 @@
             this.Controls.Add(this.pictureBox2);
             this.Name = "Form1";
             this.Text = "Bresenham\'s Algorithm";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.Resize += new System.EventHandler(this.Form1_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -300,10 +303,10 @@
         private System.Windows.Forms.TextBox textBoxY1;
         private System.Windows.Forms.TextBox textBoxY2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBoxX1Elips;
-        private System.Windows.Forms.TextBox textBoxX2Ellips;
+        private System.Windows.Forms.TextBox textBoxX1Ellips;
+        private System.Windows.Forms.TextBox textBoxWidthEllips;
         private System.Windows.Forms.TextBox textBoxY1Ellips;
-        private System.Windows.Forms.TextBox textBoxY2Ellips;
+        private System.Windows.Forms.TextBox textBoxHeightEllips;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

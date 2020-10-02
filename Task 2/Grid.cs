@@ -9,8 +9,8 @@ namespace Task_2
 {
     class Grid
     {
-        private int pixelsWidht;
-        private int pixelsHeight; 
+        private int pixelsWidth;
+        private int pixelsHeight;
 
         public void DrawGrid(Graphics graphics, int x, int y, int width, int height, int amount)
         {
@@ -23,59 +23,105 @@ namespace Task_2
                 temp += pixelsHeight;
             }
 
-            pixelsWidht = (height - y) / amount;
-            temp = 0; 
+            pixelsWidth = (height - y) / amount;
+            temp = 0;
             for (int i = 0; i <= amount; i++)
             {
                 graphics.DrawLine(pen, x, temp, width, temp); //Draw X
-                temp += pixelsWidht;
+                temp += pixelsWidth;
             }
 
             pen.Dispose();
         }
-        
-        public void DrawPixel(Graphics graphics, int x, int y){
+
+        public void DrawPixel(Graphics graphics, int x, int y)
+        {
             Brush brush = new SolidBrush(Color.Black);
             int bitMapXCoordinate = (x - 1) * pixelsHeight;
-            int bitMapYCoordinate = (y - 1) * pixelsWidht; 
+            int bitMapYCoordinate = (y - 1) * pixelsWidth;
 
             Rectangle drawPixelRect = new Rectangle(bitMapXCoordinate, bitMapYCoordinate, 20, 20);
             graphics.FillRectangle(brush, drawPixelRect);
-            brush.Dispose(); 
+            brush.Dispose();
         }
 
-        public void Algoritnm(Graphics graphics, int x1, int y1, int x2, int y2)
+        public void AlgoritmEllips(Graphics graphics, int x1, int y1, int width, int height)
         {
-            if (x1 > x2)
+            DrawPixel(graphics, x1 + width, y1 + height / 2);
+            DrawPixel(graphics, x1 + width / 2, y1);
+            DrawPixel(graphics, x1, y1 + height / 2);
+            DrawPixel(graphics, x1 + width / 2, y1 + height);
+
+            double Y = 0;
+            int X1 = x1 + width;
+            double X2 = 0;
+
+            int Xdraw = 0;
+            int Ydraw = 0;
+            int YIterator = y1 + height / 2 + 1;
+            double delta = 0;
+          
+            for (int i = x1 + width - 1; i > x1 + width / 2; i--)
             {
-                int temp = x2;
-                x2 = x1;
-                x1= temp;
-                temp = y2;
-                y2 = y1;
-                y1= temp;
-            }
-            int px = x2 - x1;
-            int py = y2 - y1;
-            int e = 2 * py - px;
-            int x = x1;
-            int y = y1;
-            DrawPixel(graphics, x1, y1);
-            while (x < x2)
-            {
-                if (e > 0)
+                Y = ((double)y1 + 0.5 * (double)height + (1 / (double)width) * (Math.Sqrt(0.25 * (double)(width * width) * (double)(height * height) - Math.Pow((i - (double)x1 - 0.5 * (double)width), 2) * Math.Pow((double)height, 2))));
+                if (Math.Abs(x1 + width / 2 - i) >= Math.Abs(y1 + height / 2 - Y))
                 {
-                    y++;
-                    e += 2 * (py - px);
+                    X2 = (double)x1 + 0.5 * (double)width + (1 / (double)height) * Math.Sqrt(0.25 * (double)(width * width) * (double)(height * height) - Math.Pow(((double)YIterator - (double)y1 - 0.5 * (double)height), 2) * Math.Pow((double)width, 2));
+
+                    delta = Math.Abs(X2 - X1);
+
+                    if (delta < 0.5)
+                    {
+                        Xdraw = X1;
+                    }
+                    else
+                    {
+                        if ((X2 - X1) > 0)
+                        {
+                            Xdraw = X1 + 1;
+                        }
+                        else
+                        {
+                            Xdraw = X1 - 1;
+                        }
+                    }
+                    X1 = (int)Math.Round(X2);
+
+                    DrawPixel(graphics, Xdraw, YIterator);
+
+                    YIterator++;
                 }
                 else
                 {
-                    e += 2 * py;
+                 
+                    delta = Math.Abs(YIterator - Y);
+
+                    if (delta < 0.5)
+                    {
+                        Ydraw = YIterator;
+                    }
+                    else
+                    {
+                        if ((Y-YIterator) > 0)
+                        {
+                            Ydraw = YIterator + 1;
+                        }
+                        else
+                        {
+                            Ydraw = YIterator - 1;
+                        }
+                    }
+                    YIterator = (int)Math.Round(Y);
+
+                    DrawPixel(graphics, i, Ydraw);
+
+                    YIterator++;
                 }
-                x++;
-                DrawPixel(graphics, x, y);
             }
         }
+
+
+
 
         private int Check(int x)
         {
@@ -83,15 +129,16 @@ namespace Task_2
             //возвращает 0, если аргумент (x) равен нулю; -1, если x < 0 и 1, если x > 0.
         }
 
-        public void DrawBresenhamLine(Graphics graphics, int x1, int y1, int x2, int y2){
-   
+        public void DrawBresenhamLine(Graphics graphics, int x1, int y1, int x2, int y2)
+        {
+
             int x, y, dx, dy, incx, incy, pdx, pdy, Eshort, Elong, Error;
             dx = x2 - x1;//проекция на ось x
             dy = y2 - y1;//проекция на ось y
 
             incx = Check(dx);
             incy = Check(dy);
-          
+
             dx = Math.Abs(dx);
             dy = Math.Abs(dy);
 
@@ -109,8 +156,8 @@ namespace Task_2
             x = x1;
             y = y1;
             Error = Elong / 2;
-                                                     
-            DrawPixel(graphics, x, y);            
+
+            DrawPixel(graphics, x, y);
 
             for (int i = 0; i < Elong; i++)
             {
