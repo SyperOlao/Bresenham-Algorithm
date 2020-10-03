@@ -51,6 +51,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -129,7 +131,7 @@
             this.textBoxX1Ellips.Name = "textBoxX1Ellips";
             this.textBoxX1Ellips.Size = new System.Drawing.Size(81, 22);
             this.textBoxX1Ellips.TabIndex = 8;
-            this.textBoxX1Ellips.Text = "2";
+            this.textBoxX1Ellips.Text = "10";
             // 
             // textBoxWidthEllips
             // 
@@ -137,7 +139,7 @@
             this.textBoxWidthEllips.Name = "textBoxWidthEllips";
             this.textBoxWidthEllips.Size = new System.Drawing.Size(81, 22);
             this.textBoxWidthEllips.TabIndex = 9;
-            this.textBoxWidthEllips.Text = "14";
+            this.textBoxWidthEllips.Text = "6";
             // 
             // textBoxY1Ellips
             // 
@@ -145,7 +147,7 @@
             this.textBoxY1Ellips.Name = "textBoxY1Ellips";
             this.textBoxY1Ellips.Size = new System.Drawing.Size(90, 22);
             this.textBoxY1Ellips.TabIndex = 10;
-            this.textBoxY1Ellips.Text = "7";
+            this.textBoxY1Ellips.Text = "10";
             // 
             // textBoxHeightEllips
             // 
@@ -255,11 +257,30 @@
             this.label10.TabIndex = 22;
             this.label10.Text = "Hei";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(717, 12);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(71, 24);
+            this.comboBox1.TabIndex = 23;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(587, 15);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(111, 17);
+            this.label11.TabIndex = 24;
+            this.label11.Text = "Amount of pixels";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -318,6 +339,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label11;
     }
 }
 
