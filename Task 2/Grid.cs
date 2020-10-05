@@ -12,7 +12,7 @@ namespace Task_2
     {
         private int pixelsWidth;
         private int pixelsHeight;
-
+        
         public void DrawGrid(Graphics graphics, int x, int y, int width, int height, int amount)
         {
             Pen pen = new Pen(Color.Black, 2);
@@ -41,7 +41,7 @@ namespace Task_2
             int bitMapXCoordinate = (x - 1) * pixelsHeight;
             int bitMapYCoordinate = (y - 1) * pixelsWidth;
 
-            Rectangle drawPixelRect = new Rectangle(bitMapXCoordinate, bitMapYCoordinate, 20, 20);
+            Rectangle drawPixelRect = new Rectangle(bitMapXCoordinate, bitMapYCoordinate,pixelsHeight, pixelsWidth);
             graphics.FillRectangle(brush, drawPixelRect);
             brush.Dispose();
         }
